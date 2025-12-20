@@ -104,6 +104,26 @@ let r1 = &s;
 let r2 = &mut s; // error
 ```
 
+### Mutable Borrow after Immutable Borrows
+
+Rust allows creating a mutable reference **after** immutable references,
+as long as the immutable references are **no longer used**.
+
+```rust
+let mut s = String::from("hello");
+
+let r1 = &s;
+let r2 = &s;
+
+println!("{} and {}", r1, r2); // last use of r1 and r2
+
+let r3 = &mut s; // ✅ OK: r1 and r2 are no longer used
+r3.push_str("!");
+````
+
+This works because Rust uses **Non-Lexical Lifetimes (NLL)**:
+the borrow ends at its **last usage**, not at the end of the scope.
+
 ---
 
 ## Borrowing Rules (Summary)
