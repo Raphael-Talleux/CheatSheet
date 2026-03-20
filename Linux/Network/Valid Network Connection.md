@@ -25,4 +25,4 @@ ip addr show enp3s0       # Show IP address
 ip route show             # Show routing table
 ping 192.168.1.1          # Ping the router
 ping 8.8.8.8              # Ping the Internet
-'''
+```
