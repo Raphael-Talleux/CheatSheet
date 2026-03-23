@@ -41,10 +41,11 @@ A **Mail Transfer Agent (MTA)** is a server component responsible for **transfer
 
 | Component | Role |
 |----------|------|
-| MUA | Email client (Thunderbird, Gmail) |
-| MTA | Transfers emails between servers |
-| MDA | Stores emails in mailbox |
-| IMAP/POP3 | Lets users read emails |
+| MUA | Email client used by users to compose and read emails (e.g. Thunderbird, Gmail) |
+| MSA | Accepts outgoing emails from MUA, handles authentication and submission (port 587) |
+| MTA | Transfers emails between mail servers using SMTP |
+| MDA | Delivers and stores emails into the recipient's mailbox |
+| IMAP/POP3 | Protocols used by MUA to retrieve emails from the server |
 
 
 ## What an MTA Does NOT Do
