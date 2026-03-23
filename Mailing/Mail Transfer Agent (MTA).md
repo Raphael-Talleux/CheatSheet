@@ -12,7 +12,7 @@ A **Mail Transfer Agent (MTA)** is a server component responsible for **transfer
 - Queue emails if the destination is temporarily unavailable
 - Deliver emails to a local delivery system (MDA)
 
-![MTA Diagram] (.img/MTA.png)
+![MTA Diagram] (./.img/MTA.png)
 
 ## Protocol
 
